@@ -30,7 +30,7 @@ JS is a single IIFE at the bottom (~100 lines) with clearly labelled sections:
 - **Project visuals**: All project card images are inline SVGs with gradient backgrounds — no `<img>` tags in project cards. Keep them as inline SVG.
 - **Scroll animations**: Add class `aos` to any element that should fade-in-up on scroll. The observer handles the rest.
 - **No resume links**: Do not add `./resume.pdf` download links anywhere. This is intentional.
-- **Email placeholder**: `ikbalhossain@example.com` is a placeholder — do not treat it as real.
+- **Email**: `ikbalhossain112@gmail.com` — real address, used in the contact section mailto link and display text.
 
 ## Color Tokens (Tailwind config)
 
