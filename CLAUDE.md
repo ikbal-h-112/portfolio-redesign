@@ -47,5 +47,33 @@ JS is a single IIFE at the bottom (~100 lines) with clearly labelled sections:
 - Local repo: `/Users/ikbalhossain/Documents/claude_code/portfolio/`
 - Remote: `https://github.com/ikbal-h-112/portfolio-redesign`
 - Branch: `main`
-- Commit after every meaningful change with a descriptive message. Push immediately after committing.
 - Git identity is set locally (no global config needed).
+- Push command: `GIT_ASKPASS="" git -C /Users/ikbalhossain/Documents/claude_code/portfolio push` (Cursor's askpass must be cleared; credential helper script at `.git/gh-credential-helper.sh` handles auth via `gh` CLI token)
+
+### Commit discipline — REQUIRED
+
+After every meaningful unit of work, Claude Code **must** stage, commit, and push. Do not batch unrelated changes into one commit. Do not finish a session without pushing.
+
+**When to commit:**
+- After completing any visible UI change (section added, layout fixed, style updated)
+- After any content update (real data swapped in, copy changed)
+- After any structural or architectural change to `index.html`
+- After updating `CLAUDE.md`
+
+**Commit message format:**
+```
+<short imperative summary (50 chars max)>
+
+- Bullet describing what changed and why
+- Another bullet if needed
+```
+
+Examples of good messages:
+```
+Update hero headline and availability badge copy
+Add real contact email and LinkedIn URL to contact section
+Fix skill bar animation not triggering on mobile
+Replace project SVG visuals with higher-contrast versions
+```
+
+**Push immediately after every commit** — this is the safety net. GitHub is the source of truth for reverting if something breaks.
