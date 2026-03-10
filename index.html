@@ -85,6 +85,19 @@
       .aos.visible {
         @apply opacity-100 translate-y-0;
       }
+      .filter-tab {
+        @apply inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border transition-all duration-200 cursor-pointer whitespace-nowrap;
+      }
+      .filter-tab-active {
+        @apply bg-accent text-white border-accent shadow-md shadow-accent/25;
+      }
+      .filter-tab-inactive {
+        @apply border-navy-700 text-slate-400 bg-transparent hover:border-accent/60 hover:text-accent;
+      }
+      .filter-hidden {
+        @apply opacity-0 scale-95 pointer-events-none;
+        transition: opacity 200ms, transform 200ms;
+      }
     }
   </style>
 
@@ -672,10 +685,25 @@
       <p class="section-sub">Real-world data problems solved end-to-end — from raw ingestion to actionable insight.</p>
     </div>
 
+    <!-- ── Project Filter Tabs ── -->
+    <div class="mb-10 -mx-2 px-2 overflow-x-auto">
+      <div class="flex gap-2 pb-2 flex-wrap">
+        <button class="filter-tab filter-tab-active" data-filter="all">All <span class="font-mono text-[0.65rem] opacity-60 ml-0.5">(7)</span></button>
+        <button class="filter-tab filter-tab-inactive" data-filter="python-ml">Python / ML <span class="font-mono text-[0.65rem] opacity-60 ml-0.5">(3)</span></button>
+        <button class="filter-tab filter-tab-inactive" data-filter="data-analysis">Data Analysis <span class="font-mono text-[0.65rem] opacity-60 ml-0.5">(2)</span></button>
+        <button class="filter-tab filter-tab-inactive" data-filter="sql">SQL <span class="font-mono text-[0.65rem] opacity-60 ml-0.5">(2)</span></button>
+        <button class="filter-tab filter-tab-inactive" data-filter="nlp">NLP <span class="font-mono text-[0.65rem] opacity-60 ml-0.5">(1)</span></button>
+        <button class="filter-tab filter-tab-inactive" data-filter="r">R <span class="font-mono text-[0.65rem] opacity-60 ml-0.5">(1)</span></button>
+        <button class="filter-tab filter-tab-inactive" data-filter="tableau">Tableau</button>
+        <button class="filter-tab filter-tab-inactive" data-filter="power-bi">Power BI</button>
+        <button class="filter-tab filter-tab-inactive" data-filter="publications">Publications</button>
+      </div>
+    </div>
+
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
       <!-- ── Project 1: Breast Cancer Prediction ── -->
-      <div class="card overflow-hidden flex flex-col group hover:-translate-y-1.5 hover:shadow-xl hover:shadow-accent/20 hover:border-accent/40 transition-all duration-200 aos">
+      <div data-categories="all python-ml" class="card overflow-hidden flex flex-col group hover:-translate-y-1.5 hover:shadow-xl hover:shadow-accent/20 hover:border-accent/40 transition-all duration-200 aos">
         <div class="aspect-video project-visual relative flex items-center justify-center" style="background:linear-gradient(135deg,#4c0519 0%,#881337 50%,#be123c 100%)">
           <svg class="relative z-10 w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="rgba(253,164,175,0.85)" stroke-width="1.5">
             <circle cx="32" cy="32" r="20" stroke-dasharray="4 3"/>
@@ -723,7 +751,7 @@
       </div>
 
       <!-- ── Project 2: Lung Disease Analysis ── -->
-      <div class="card overflow-hidden flex flex-col group hover:-translate-y-1.5 hover:shadow-xl hover:shadow-accent/20 hover:border-accent/40 transition-all duration-200 aos" style="transition-delay:50ms">
+      <div data-categories="all data-analysis" class="card overflow-hidden flex flex-col group hover:-translate-y-1.5 hover:shadow-xl hover:shadow-accent/20 hover:border-accent/40 transition-all duration-200 aos" style="transition-delay:50ms">
         <div class="aspect-video project-visual relative flex items-center justify-center" style="background:linear-gradient(135deg,#0c1445 0%,#1e3a8a 50%,#1d4ed8 100%)">
           <svg class="relative z-10 w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="rgba(147,197,253,0.85)" stroke-width="1.5">
             <path d="M32 12 C32 12 20 16 16 28 C12 40 14 52 22 52 C28 52 30 44 32 44 C34 44 36 52 42 52 C50 52 52 40 48 28 C44 16 32 12 32 12Z" fill="rgba(147,197,253,0.12)"/>
@@ -768,7 +796,7 @@
       </div>
 
       <!-- ── Project 3: Stock Price Prediction ── -->
-      <div class="card overflow-hidden flex flex-col group hover:-translate-y-1.5 hover:shadow-xl hover:shadow-accent/20 hover:border-accent/40 transition-all duration-200 aos" style="transition-delay:100ms">
+      <div data-categories="all python-ml" class="card overflow-hidden flex flex-col group hover:-translate-y-1.5 hover:shadow-xl hover:shadow-accent/20 hover:border-accent/40 transition-all duration-200 aos" style="transition-delay:100ms">
         <div class="aspect-video project-visual relative flex items-center justify-center" style="background:linear-gradient(135deg,#052e16 0%,#14532d 50%,#15803d 100%)">
           <svg class="relative z-10 w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="rgba(134,239,172,0.85)" stroke-width="1.5">
             <line x1="12" y1="20" x2="12" y2="44"/>
@@ -816,7 +844,7 @@
       </div>
 
       <!-- ── Project 4: Cyclistic Bike Share ── -->
-      <div class="card overflow-hidden flex flex-col group hover:-translate-y-1.5 hover:shadow-xl hover:shadow-accent/20 hover:border-accent/40 transition-all duration-200 aos" style="transition-delay:150ms">
+      <div data-categories="all sql r" class="card overflow-hidden flex flex-col group hover:-translate-y-1.5 hover:shadow-xl hover:shadow-accent/20 hover:border-accent/40 transition-all duration-200 aos" style="transition-delay:150ms">
         <div class="aspect-video project-visual relative flex items-center justify-center" style="background:linear-gradient(135deg,#431407 0%,#9a3412 50%,#ea580c 100%)">
           <svg class="relative z-10 w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="rgba(253,186,116,0.85)" stroke-width="1.5">
             <circle cx="16" cy="44" r="10" fill="rgba(253,186,116,0.12)"/>
@@ -864,7 +892,7 @@
       </div>
 
       <!-- ── Project 5: 8 Week SQL Challenge ── -->
-      <div class="card overflow-hidden flex flex-col group hover:-translate-y-1.5 hover:shadow-xl hover:shadow-accent/20 hover:border-accent/40 transition-all duration-200 aos" style="transition-delay:200ms">
+      <div data-categories="all sql" class="card overflow-hidden flex flex-col group hover:-translate-y-1.5 hover:shadow-xl hover:shadow-accent/20 hover:border-accent/40 transition-all duration-200 aos" style="transition-delay:200ms">
         <div class="aspect-video project-visual relative flex items-center justify-center" style="background:linear-gradient(135deg,#1e1b4b 0%,#3730a3 50%,#6d28d9 100%)">
           <svg class="relative z-10 w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="rgba(196,181,253,0.85)" stroke-width="1.5">
             <ellipse cx="32" cy="18" rx="18" ry="6" fill="rgba(167,139,250,0.12)"/>
@@ -908,7 +936,7 @@
       </div>
 
       <!-- ── Project 6: Twitter Sentiment Analysis ── -->
-      <div class="card overflow-hidden flex flex-col group hover:-translate-y-1.5 hover:shadow-xl hover:shadow-accent/20 hover:border-accent/40 transition-all duration-200 aos" style="transition-delay:250ms">
+      <div data-categories="all python-ml nlp" class="card overflow-hidden flex flex-col group hover:-translate-y-1.5 hover:shadow-xl hover:shadow-accent/20 hover:border-accent/40 transition-all duration-200 aos" style="transition-delay:250ms">
         <div class="aspect-video project-visual relative flex items-center justify-center" style="background:linear-gradient(135deg,#0c1445 0%,#0e3a5f 50%,#0369a1 100%)">
           <svg class="relative z-10 w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="rgba(125,211,252,0.85)" stroke-width="1.5">
             <rect x="8" y="12" width="32" height="20" rx="4" fill="rgba(125,211,252,0.1)"/>
@@ -955,7 +983,7 @@
       </div>
 
       <!-- ── Project 7: Starbucks EDA ── -->
-      <div class="card overflow-hidden flex flex-col group hover:-translate-y-1.5 hover:shadow-xl hover:shadow-accent/20 hover:border-accent/40 transition-all duration-200 aos" style="transition-delay:300ms">
+      <div data-categories="all data-analysis" class="card overflow-hidden flex flex-col group hover:-translate-y-1.5 hover:shadow-xl hover:shadow-accent/20 hover:border-accent/40 transition-all duration-200 aos" style="transition-delay:300ms">
         <div class="aspect-video project-visual relative flex items-center justify-center" style="background:linear-gradient(135deg,#052e16 0%,#065f46 50%,#047857 100%)">
           <svg class="relative z-10 w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="rgba(110,231,183,0.85)" stroke-width="1.5">
             <path d="M14 22 L18 52 L46 52 L50 22 Z" fill="rgba(110,231,183,0.1)"/>
@@ -995,6 +1023,46 @@
               GitHub
             </a>
           </div>
+        </div>
+      </div>
+
+      <!-- ── Placeholder: Tableau ── -->
+      <div data-categories="tableau" style="display:none" class="card overflow-hidden flex flex-col border-2 border-dashed border-navy-600 aos">
+        <div class="aspect-video relative flex items-center justify-center" style="background:linear-gradient(135deg,#0c1a2e 0%,#1a3a5c 100%)">
+          <svg class="w-14 h-14 opacity-30" viewBox="0 0 64 64" fill="none" stroke="#60a5fa" stroke-width="1.5">
+            <rect x="12" y="20" width="8" height="24" rx="1"/><rect x="28" y="12" width="8" height="32" rx="1"/><rect x="44" y="28" width="8" height="16" rx="1"/>
+          </svg>
+        </div>
+        <div class="p-5 flex flex-col gap-3 flex-1 items-center justify-center text-center">
+          <span class="text-xs font-semibold uppercase tracking-wide text-blue-400">Tableau</span>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white">Coming Soon</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Tableau dashboard projects are in progress and will be added soon.</p>
+        </div>
+      </div>
+      <!-- ── Placeholder: Power BI ── -->
+      <div data-categories="power-bi" style="display:none" class="card overflow-hidden flex flex-col border-2 border-dashed border-navy-600 aos">
+        <div class="aspect-video relative flex items-center justify-center" style="background:linear-gradient(135deg,#1c1000 0%,#3d2a00 100%)">
+          <svg class="w-14 h-14 opacity-30" viewBox="0 0 64 64" fill="none" stroke="#fbbf24" stroke-width="1.5">
+            <rect x="8" y="16" width="10" height="32" rx="1"/><rect x="24" y="8" width="10" height="40" rx="1"/><rect x="40" y="24" width="10" height="24" rx="1"/><path d="M8 48 h48"/>
+          </svg>
+        </div>
+        <div class="p-5 flex flex-col gap-3 flex-1 items-center justify-center text-center">
+          <span class="text-xs font-semibold uppercase tracking-wide text-yellow-400">Power BI</span>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white">Coming Soon</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Power BI dashboard projects are in progress and will be added soon.</p>
+        </div>
+      </div>
+      <!-- ── Placeholder: Publications ── -->
+      <div data-categories="publications" style="display:none" class="card overflow-hidden flex flex-col border-2 border-dashed border-navy-600 aos">
+        <div class="aspect-video relative flex items-center justify-center" style="background:linear-gradient(135deg,#0d1f0d 0%,#1a3d1a 100%)">
+          <svg class="w-14 h-14 opacity-30" viewBox="0 0 64 64" fill="none" stroke="#4ade80" stroke-width="1.5">
+            <rect x="12" y="8" width="32" height="42" rx="2"/><line x1="20" y1="20" x2="36" y2="20"/><line x1="20" y1="28" x2="36" y2="28"/><line x1="20" y1="36" x2="30" y2="36"/>
+          </svg>
+        </div>
+        <div class="p-5 flex flex-col gap-3 flex-1 items-center justify-center text-center">
+          <span class="text-xs font-semibold uppercase tracking-wide text-green-400">Publications</span>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white">Coming Soon</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Research papers and articles are being compiled and will appear here.</p>
         </div>
       </div>
 
@@ -1330,6 +1398,45 @@
       e.preventDefault();
       var top = target.getBoundingClientRect().top + window.pageYOffset - OFFSET;
       window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+
+  // ── 8. Project Category Filter ───────────────────────────────
+  var filterBtns = document.querySelectorAll('[data-filter]');
+  var projectCards = document.querySelectorAll('[data-categories]');
+
+  function applyFilter(category) {
+    filterBtns.forEach(function(btn) {
+      var active = btn.getAttribute('data-filter') === category;
+      btn.classList.toggle('filter-tab-active', active);
+      btn.classList.toggle('filter-tab-inactive', !active);
+    });
+
+    var visibleIndex = 0;
+    projectCards.forEach(function(card) {
+      var cats = card.getAttribute('data-categories').split(' ');
+      if (cats.includes(category)) {
+        card.style.display = '';
+        card.style.transitionDelay = (visibleIndex * 50) + 'ms';
+        visibleIndex++;
+        requestAnimationFrame(function() {
+          requestAnimationFrame(function() {
+            card.classList.remove('filter-hidden');
+          });
+        });
+      } else {
+        card.classList.add('filter-hidden');
+        card.style.transitionDelay = '0ms';
+        setTimeout(function() {
+          if (card.classList.contains('filter-hidden')) card.style.display = 'none';
+        }, 220);
+      }
+    });
+  }
+
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      applyFilter(btn.getAttribute('data-filter'));
     });
   });
 
