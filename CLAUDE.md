@@ -44,6 +44,7 @@ JS is a single IIFE at the bottom with clearly labelled sections:
 - **Dark mode**: Tailwind `darkMode: 'class'`. Default is dark (`<html class="dark">`). Light mode = remove `dark` class. Write light styles first, `dark:` overrides second.
 - **Skill bars**: Set target width via `data-width="85"` on `.skill-fill` divs. JS reads this on intersection and sets `style.width`. Do not set width in CSS.
 - **Project visuals**: All project card images are inline SVGs with gradient backgrounds — no `<img>` tags in project cards. Keep them as inline SVG.
+- **Profile photo**: `photo.png` lives in the repo root (`/portfolio/photo.png`). Referenced as `src="photo.png"` in the About section. `object-cover object-top` ensures the face stays centred in the `aspect-[4/5]` card. Do NOT use external image URLs (picsum etc.) — always use the local file.
 - **Scroll animations**: Add class `aos` to any element that should fade-in-up on scroll. The observer handles the rest.
 - **No resume links**: Do not add `./resume.pdf` download links anywhere. This is intentional.
 - **Email**: `ikbalhossain112@gmail.com` — real address, used in the contact section mailto link and display text.
