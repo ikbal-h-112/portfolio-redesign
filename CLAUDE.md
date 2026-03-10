@@ -6,6 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Single-file static portfolio for **Md Ikbal Hossain** (Data Analyst). Everything lives in `index.html` — no build system, no framework, no dependencies to install. Open via `file://` or any static host.
 
+**Live URL:** https://ikbal-h-112.github.io/portfolio-redesign/
+**GitHub repo:** https://github.com/ikbal-h-112/portfolio-redesign
+
 **Two directories in play:**
 | Directory | Main file | Purpose |
 |-----------|-----------|---------|
