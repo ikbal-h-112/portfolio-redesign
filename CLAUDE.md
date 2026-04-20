@@ -100,6 +100,7 @@ JS is a single IIFE at the bottom with clearly labelled sections:
 | 5 | 8 Week SQL Challenge | `all sql` | `8-Week-SQL-Challenge` |
 | 6 | Twitter Sentiment Analysis | `all python-ml nlp` | `Twitter-Sentiment-Analysis` |
 | 7 | Starbucks EDA & Visualisation | `all data-analysis` | `Starbucks-EDA-and-Visualization` |
+| 8 | Tong Coffee House — 2023 Half Year Review | `all power-bi` | `Tong-Coffee-House-PowerBI` |
 
 GitHub base: `https://github.com/ikbal-h-112/`
 
@@ -107,7 +108,7 @@ Card class pattern:
 ```
 class="card overflow-hidden flex flex-col group hover:-translate-y-1.5 hover:shadow-xl hover:shadow-accent/20 hover:border-accent/40 transition-all duration-200 aos"
 ```
-AOS stagger delays: 0, 50, 100, 150, 200, 250, 300ms via `style="transition-delay:Xms"`
+AOS stagger delays: 0, 50, 100, 150, 200, 250, 300, 350ms via `style="transition-delay:Xms"`
 
 ---
 
@@ -124,7 +125,7 @@ Filter tab bar sits between the section header and the grid. 9 tabs total:
 | NLP | `nlp` | Project 6 |
 | R | `r` | Project 4 |
 | Tableau | `tableau` | Placeholder card |
-| Power BI | `power-bi` | Placeholder card |
+| Power BI | `power-bi` | Project 8 (Tong Coffee House) |
 | Publications | `publications` | Placeholder card |
 
 ### Placeholder cards
