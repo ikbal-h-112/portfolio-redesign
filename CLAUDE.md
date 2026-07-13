@@ -105,18 +105,18 @@ There is no About section (folded into hero).
 |---|-------|-------------------|-------------|
 | 0a | BevBot — AI Lead Generation Chatbot | `all automation` | `BevBot` |
 | 0b | Expense Analyzer — AI Receipt Scanner | `all automation` | `Expense-Analyzer` |
-| 1 | Breast Cancer Prediction | `all python-ml` | `Breast-Cancer-Prediction` |
-| 2 | Lung Disease Analysis | `all data-analysis` | `Lung-Disease-Analysis` |
-| 3 | Stock Price Prediction | `all python-ml` | `Stock-Price-Prediction` |
-| 4 | Cyclistic Bike Share Case Study | `all sql r` | `Cyclistic-Bike-Share-Analysis` |
-| 5 | 8 Week SQL Challenge | `all sql` | `8-Week-SQL-Challenge` |
-| 6 | Twitter Sentiment Analysis | `all python-ml nlp` | `Twitter-Sentiment-Analysis` |
-| 7 | Starbucks EDA & Visualisation | `all data-analysis` | `Starbucks-EDA-and-Visualization` |
+| 1 | Breast Cancer Prediction | `all python-ml` | `Data-Analysis/tree/main/Breast%20Cancer%20Prediction` |
+| 2 | Lung Disease Analysis | `all data-analysis` | `Data-Analysis/blob/main/publication_In%20Depth%20Analysis%20of%20Lung%20Disease.pdf` |
+| 3 | Stock Price Prediction | `all python-ml` | `Data-Analysis/blob/main/Stock%20Price%20Prediction.ipynb` |
+| 4 | Cyclistic Bike Share Case Study | `all sql r` | `google-data-analytics-case-study` |
+| 5 | 8 Week SQL Challenge | `all sql` | `8-week-sql-challenge` |
+| 6 | Twitter Sentiment Analysis | `all python-ml nlp` | `Data-Analysis/blob/main/Twitter_Sentimental_Analysis.ipynb` |
+| 7 | Starbucks EDA & Visualisation | `all data-analysis` | `Data-Analysis/blob/main/Starbucks%20Data%20EDA%20and%20Visualization.ipynb` |
 | 8 | Tong Coffee House — 2023 Half Year Review | `all power-bi` | `Tong-Coffee-House-PowerBI` |
 | 9 | Denver Bev — Executive Sales Report | `all power-bi` | `Denver-Bev-PowerBI` |
 | 10 | Toy Store — 2023 Sales Performance Report | `all power-bi` | `Toy-Store-PowerBI` |
 
-GitHub base: `https://github.com/ikbal-h-112/`
+GitHub base: `https://github.com/ikbal-h-112/` — several data projects live inside the shared `Data-Analysis` repo as folders/notebooks rather than standalone repos; always verify the path exists before linking.
 
 Card structure (session 3): each project is an `<article data-categories="…">` made of **two stacked rounded-2xl blocks** with a small gap — a cover block (SVG glyph or screenshot) and a content block (title + year, description paragraph, `.tag-pill` row, white "Source Code →" pill).
 
