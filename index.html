@@ -366,7 +366,7 @@
     <!-- Filter tabs -->
     <div class="mt-10 mb-12 aos" style="transition-delay:100ms">
       <div class="flex gap-2 flex-wrap justify-center">
-        <button class="filter-tab filter-tab-active" data-filter="all">All <span class="font-mono text-[0.65rem] opacity-60 ml-0.5">(12)</span></button>
+        <button class="filter-tab filter-tab-active" data-filter="all">All <span class="font-mono text-[0.65rem] opacity-60 ml-0.5">(14)</span></button>
         <button class="filter-tab filter-tab-inactive" data-filter="automation">Automation <span class="font-mono text-[0.65rem] opacity-60 ml-0.5">(2)</span></button>
         <button class="filter-tab filter-tab-inactive" data-filter="apps">Vibe Coded Apps</button>
         <button class="filter-tab filter-tab-inactive" data-filter="python-ml">Python / ML <span class="font-mono text-[0.65rem] opacity-60 ml-0.5">(3)</span></button>
@@ -376,7 +376,7 @@
         <button class="filter-tab filter-tab-inactive" data-filter="r">R <span class="font-mono text-[0.65rem] opacity-60 ml-0.5">(1)</span></button>
         <button class="filter-tab filter-tab-inactive" data-filter="tableau">Tableau</button>
         <button class="filter-tab filter-tab-inactive" data-filter="power-bi">Power BI <span class="font-mono text-[0.65rem] opacity-60 ml-0.5">(3)</span></button>
-        <button class="filter-tab filter-tab-inactive" data-filter="publications">Publications</button>
+        <button class="filter-tab filter-tab-inactive" data-filter="publications">Publications <span class="font-mono text-[0.65rem] opacity-60 ml-0.5">(2)</span></button>
       </div>
     </div>
 
@@ -799,16 +799,72 @@
         </div>
       </article>
 
-      <!-- ── Placeholder: Publications ── -->
-      <article data-categories="publications" style="display:none" class="aos flex flex-col gap-2.5">
-        <div class="rounded-2xl overflow-hidden border-2 border-dashed border-line bg-card h-56 md:h-64 flex items-center justify-center">
-          <svg class="w-20 h-20 opacity-25" viewBox="0 0 64 64" fill="none" stroke="#9ca3af" stroke-width="1.5">
-            <rect x="12" y="8" width="32" height="42" rx="2"/><line x1="20" y1="20" x2="36" y2="20"/><line x1="20" y1="28" x2="36" y2="28"/><line x1="20" y1="36" x2="30" y2="36"/>
+      <!-- ── Publication 1: Lung Disease Prediction (Springer) ── -->
+      <article data-categories="all publications" class="aos flex flex-col gap-2.5" style="transition-delay:500ms">
+        <div class="rounded-2xl overflow-hidden border border-line bg-card h-56 md:h-64 flex items-center justify-center" style="background:radial-gradient(ellipse at 30% 20%, #232323 0%, #161616 70%)">
+          <svg class="w-24 h-24" viewBox="0 0 64 64" fill="none" stroke="rgba(110,231,183,0.55)" stroke-width="1.5">
+            <rect x="10" y="6" width="36" height="48" rx="3" fill="rgba(110,231,183,0.06)"/>
+            <line x1="17" y1="15" x2="39" y2="15"/><line x1="17" y1="21" x2="33" y2="21"/>
+            <path d="M28 30 C28 30 22 32 20 38 C18 44 19 49 23 49 C26 49 27 45 28 45 C29 45 30 49 33 49 C37 49 38 44 36 38 C34 32 28 30 28 30Z" fill="rgba(110,231,183,0.1)"/>
+            <line x1="28" y1="32" x2="28" y2="45"/>
+            <circle cx="48" cy="46" r="10" fill="rgba(110,231,183,0.12)" stroke="rgba(110,231,183,0.7)"/>
+            <path d="M43 46 L46 46 L47.5 42 L49.5 50 L51 46 L53 46" stroke="rgba(110,231,183,0.85)"/>
           </svg>
         </div>
-        <div class="rounded-2xl border-2 border-dashed border-line bg-card p-6 md:p-7 flex flex-col items-center justify-center text-center flex-1">
-          <h3 class="text-xl font-semibold text-white tracking-tight">Coming Soon</h3>
-          <p class="mt-2 text-sm text-neutral-500">Research papers and articles are being compiled and will appear here.</p>
+        <div class="rounded-2xl border border-line bg-card p-6 md:p-7 flex flex-col flex-1">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-xl font-semibold text-white tracking-tight">In-Depth Analysis of Lung Disease Prediction Using ML Algorithms</h3>
+            <span class="font-mono text-xs text-neutral-500 shrink-0">2020</span>
+          </div>
+          <p class="mt-3 text-[15px] text-neutral-400 leading-relaxed">
+            Peer-reviewed research classifying respiratory conditions — asthma, COPD,
+            bronchitis, emphysema, and lung cancer — from 323 patient records with 19
+            clinical attributes across multiple ML classifiers. Published by Springer
+            (MIND 2020); cited 20+ times.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="tag-pill">Machine Learning</span><span class="tag-pill">Healthcare</span><span class="tag-pill">Springer</span>
+          </div>
+          <div class="mt-6 flex gap-2">
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YT-FfaMAAAAJ&citation_for_view=YT-FfaMAAAAJ:u5HHmVD_uO8C" target="_blank" rel="noopener" class="btn-white btn-sm">
+              Read Paper
+              <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── Publication 2: PrecisionCardio (IEEE) ── -->
+      <article data-categories="all publications" class="aos flex flex-col gap-2.5" style="transition-delay:550ms">
+        <div class="rounded-2xl overflow-hidden border border-line bg-card h-56 md:h-64 flex items-center justify-center" style="background:radial-gradient(ellipse at 70% 20%, #232323 0%, #161616 70%)">
+          <svg class="w-24 h-24" viewBox="0 0 64 64" fill="none" stroke="rgba(251,113,133,0.55)" stroke-width="1.5">
+            <rect x="10" y="6" width="36" height="48" rx="3" fill="rgba(251,113,133,0.06)"/>
+            <line x1="17" y1="15" x2="39" y2="15"/><line x1="17" y1="21" x2="33" y2="21"/>
+            <path d="M28 48 C24 44 17 39 17 33 C17 29 20 27 23 27 C25 27 27 28 28 30 C29 28 31 27 33 27 C36 27 39 29 39 33 C39 39 32 44 28 48Z" fill="rgba(251,113,133,0.1)"/>
+            <circle cx="48" cy="46" r="10" fill="rgba(251,113,133,0.12)" stroke="rgba(251,113,133,0.7)"/>
+            <path d="M42 46 L45 46 L46.5 42.5 L48.5 49.5 L50 46 L54 46" stroke="rgba(251,113,133,0.85)"/>
+          </svg>
+        </div>
+        <div class="rounded-2xl border border-line bg-card p-6 md:p-7 flex flex-col flex-1">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-xl font-semibold text-white tracking-tight">PrecisionCardio: ML Prediction of Heart Failure Trajectory</h3>
+            <span class="font-mono text-xs text-neutral-500 shrink-0">2024</span>
+          </div>
+          <p class="mt-3 text-[15px] text-neutral-400 leading-relaxed">
+            Co-authored research helping cardiologists forecast heart-failure progression
+            from 918 patient records — benchmarking six classification models including
+            SVM, Naïve Bayes, and Random Forest. Published at IEEE ICT 2024; cited 15+
+            times.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="tag-pill">Machine Learning</span><span class="tag-pill">Healthcare</span><span class="tag-pill">IEEE</span>
+          </div>
+          <div class="mt-6 flex gap-2">
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YT-FfaMAAAAJ&citation_for_view=YT-FfaMAAAAJ:d1gkVwhDpl0C" target="_blank" rel="noopener" class="btn-white btn-sm">
+              Read Paper
+              <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
         </div>
       </article>
 

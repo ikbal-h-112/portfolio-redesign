@@ -99,7 +99,7 @@ There is no About section (folded into hero).
 
 ---
 
-## Projects — All 12 Real Cards
+## Projects — All 14 Real Cards
 
 | # | Title | `data-categories` | GitHub slug |
 |---|-------|-------------------|-------------|
@@ -115,6 +115,8 @@ There is no About section (folded into hero).
 | 8 | Tong Coffee House — 2023 Half Year Review | `all power-bi` | `Tong-Coffee-House-PowerBI` |
 | 9 | Denver Bev — Executive Sales Report | `all power-bi` | `Denver-Bev-PowerBI` |
 | 10 | Toy Store — 2023 Sales Performance Report | `all power-bi` | `Toy-Store-PowerBI` |
+| 11 | In-Depth Analysis of Lung Disease Prediction (Springer, 2020) | `all publications` | Google Scholar citation link |
+| 12 | PrecisionCardio: Heart Failure Trajectory (IEEE ICT, 2024) | `all publications` | Google Scholar citation link |
 
 GitHub base: `https://github.com/ikbal-h-112/` — several data projects live inside the shared `Data-Analysis` repo as folders/notebooks rather than standalone repos; always verify the path exists before linking.
 
@@ -130,7 +132,7 @@ Filter pill bar sits centered between the section header and the grid. Active ta
 
 | Tab label | `data-filter` | Shows |
 |-----------|---------------|-------|
-| All | `all` | All 12 real projects |
+| All | `all` | All 14 real projects |
 | Automation | `automation` | Projects 0a, 0b (BevBot, Expense Analyzer) |
 | Python / ML | `python-ml` | Projects 1, 3, 6 |
 | Data Analysis | `data-analysis` | Projects 2, 7 |
@@ -139,10 +141,10 @@ Filter pill bar sits centered between the section header and the grid. Active ta
 | R | `r` | Project 4 |
 | Tableau | `tableau` | Placeholder card |
 | Power BI | `power-bi` | Projects 8, 9, 10 (Tong, Denver Bev, Toy Store) |
-| Publications | `publications` | Placeholder card |
+| Publications | `publications` | Projects 11, 12 (real papers, link to Google Scholar) |
 
 ### Placeholder cards
-Three "Coming Soon" cards (Tableau, Vibe Coded Apps `data-filter="apps"`, Publications) with `style="display:none"` by default — same two-block article structure but `border-2 border-dashed border-line` and a gray glyph at low opacity.
+Two "Coming Soon" cards (Tableau, Vibe Coded Apps `data-filter="apps"`) with `style="display:none"` by default — same two-block article structure but `border-2 border-dashed border-line` and a gray glyph at low opacity.
 
 ### JS filter logic (IIFE section 6)
 - `applyFilter(category)` toggles active/inactive classes on tabs and shows/hides cards
