@@ -97,10 +97,11 @@ There is no About or Experience section. (Experience accordion à la the referen
 
 ---
 
-## Projects — All 7 Real Cards
+## Projects — All 9 Real Cards
 
 | # | Title | `data-categories` | GitHub slug |
 |---|-------|-------------------|-------------|
+| 0 | BevBot — AI Lead Generation Chatbot | `all automation` | `BevBot` |
 | 1 | Breast Cancer Prediction | `all python-ml` | `Breast-Cancer-Prediction` |
 | 2 | Lung Disease Analysis | `all data-analysis` | `Lung-Disease-Analysis` |
 | 3 | Stock Price Prediction | `all python-ml` | `Stock-Price-Prediction` |
@@ -120,11 +121,12 @@ AOS stagger delays: 0, 50, 100, 150, 200, 250, 300, 350ms via `style="transition
 
 ## Project Filter Tabs
 
-Filter pill bar sits centered between the section header and the grid. Active tab = white bg / black text. 9 tabs total:
+Filter pill bar sits centered between the section header and the grid. Active tab = white bg / black text. 10 tabs total:
 
 | Tab label | `data-filter` | Shows |
 |-----------|---------------|-------|
-| All | `all` | All 7 real projects |
+| All | `all` | All 9 real projects |
+| Automation | `automation` | Project 0 (BevBot) |
 | Python / ML | `python-ml` | Projects 1, 3, 6 |
 | Data Analysis | `data-analysis` | Projects 2, 7 |
 | SQL | `sql` | Projects 4, 5 |
