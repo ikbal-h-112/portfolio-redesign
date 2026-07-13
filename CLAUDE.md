@@ -9,13 +9,9 @@ Single-file static portfolio for **Md Ikbal Hossain** (Data Analyst). Everything
 **Live URL:** https://ikbal-h-112.github.io/portfolio-redesign/
 **GitHub repo:** https://github.com/ikbal-h-112/portfolio-redesign
 
-**Two directories in play:**
-| Directory | Main file | Purpose |
-|-----------|-----------|---------|
-| `/Users/ikbalhossain/Documents/claude_code/portfolio/` | `index.html` | Production — source of truth, push to GitHub |
-| `/Users/ikbalhossain/Documents/claude_code/test/` | `demo.html` | Local working copy for experimentation |
+**Working directory (Windows):** `C:\Projects\portfolio-redesign\` — single copy, no separate demo/test directory. `index.html` is production and source of truth; edits go straight here.
 
-**Preview rule:** Build changes in `demo_preview.html` first. Never touch `demo.html` directly until user approves the preview. Once approved, apply identical changes to `demo.html` AND `index.html`, then commit and push.
+**Preview rule:** Preview changes locally (open `index.html` via `file://` or a static server) before committing anything visually risky. There is no separate `demo.html`/`demo_preview.html` on this machine — that Mac-only workflow has been retired.
 
 ---
 
@@ -144,11 +140,11 @@ Three "Coming Soon" cards with `style="display:none"` by default, `border-2 bord
 
 ## Git Workflow
 
-- Local repo: `/Users/ikbalhossain/Documents/claude_code/portfolio/`
+- Local repo: `C:\Projects\portfolio-redesign\`
 - Remote: `https://github.com/ikbal-h-112/portfolio-redesign`
 - Branch: `main`
-- Git identity is set locally (no global config needed).
-- Push command: `GIT_ASKPASS="" git -C /Users/ikbalhossain/Documents/claude_code/portfolio push` (Cursor's askpass must be cleared; credential helper script at `.git/gh-credential-helper.sh` handles auth via `gh` CLI token)
+- Git identity is set locally in this repo (`user.name` / `user.email`) — no global config needed.
+- Auth: GitHub CLI (`gh`) is authenticated on this machine and configured as the git credential helper via `gh auth setup-git`. Plain `git push` works with no extra flags.
 
 ### Commit discipline — REQUIRED
 
