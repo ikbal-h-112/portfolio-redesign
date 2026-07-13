@@ -97,7 +97,7 @@ There is no About or Experience section. (Experience accordion à la the referen
 
 ---
 
-## Projects — All 10 Real Cards
+## Projects — All 12 Real Cards
 
 | # | Title | `data-categories` | GitHub slug |
 |---|-------|-------------------|-------------|
@@ -111,6 +111,8 @@ There is no About or Experience section. (Experience accordion à la the referen
 | 6 | Twitter Sentiment Analysis | `all python-ml nlp` | `Twitter-Sentiment-Analysis` |
 | 7 | Starbucks EDA & Visualisation | `all data-analysis` | `Starbucks-EDA-and-Visualization` |
 | 8 | Tong Coffee House — 2023 Half Year Review | `all power-bi` | `Tong-Coffee-House-PowerBI` |
+| 9 | Denver Bev — Executive Sales Report | `all power-bi` | `Denver-Bev-PowerBI` |
+| 10 | Toy Store — 2023 Sales Performance Report | `all power-bi` | `Toy-Store-PowerBI` |
 
 GitHub base: `https://github.com/ikbal-h-112/`
 
@@ -126,7 +128,7 @@ Filter pill bar sits centered between the section header and the grid. Active ta
 
 | Tab label | `data-filter` | Shows |
 |-----------|---------------|-------|
-| All | `all` | All 10 real projects |
+| All | `all` | All 12 real projects |
 | Automation | `automation` | Projects 0a, 0b (BevBot, Expense Analyzer) |
 | Python / ML | `python-ml` | Projects 1, 3, 6 |
 | Data Analysis | `data-analysis` | Projects 2, 7 |
@@ -134,7 +136,7 @@ Filter pill bar sits centered between the section header and the grid. Active ta
 | NLP | `nlp` | Project 6 |
 | R | `r` | Project 4 |
 | Tableau | `tableau` | Placeholder card |
-| Power BI | `power-bi` | Project 8 (Tong Coffee House) |
+| Power BI | `power-bi` | Projects 8, 9, 10 (Tong, Denver Bev, Toy Store) |
 | Publications | `publications` | Placeholder card |
 
 ### Placeholder cards
