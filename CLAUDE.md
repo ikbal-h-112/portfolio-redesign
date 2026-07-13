@@ -38,7 +38,8 @@ JS is a single IIFE at the bottom with clearly labelled sections:
 3. Active nav link (`IntersectionObserver`, rootMargin `-40% 0px -55% 0px`)
 4. Scroll animations (`IntersectionObserver` on `.aos` → adds `.visible`)
 5. Smooth scroll with 72px header offset
-6. **Project category filter** — `applyFilter(category)`, staggered reveal, placeholder show/hide
+6. **Experience accordion** — `.exp-item` cards toggle open on click; `.exp-body` collapses via `max-height`; arrow rotates 180° when open; card with `open` class starts expanded
+7. **Project category filter** — `applyFilter(category)`, staggered reveal, placeholder show/hide
 
 ---
 
@@ -85,15 +86,16 @@ Text: `text-white` headings, `text-neutral-400` body, `text-neutral-500` muted/m
 
 ## Page Sections (in order)
 
-1. Nav (avatar + name, links, white "Contact Me →" pill)
-2. Hero (`#home`) — availability badge, "Data Analyst." headline, intro, CTAs, tool tiles; photo card right
-3. Tech Stack (`#skills`) — centered header + icon pills
+1. Nav (avatar + name, links incl. Experience, white "Contact Me →" pill)
+2. Hero (`#home`) — availability badge, "Data Analyst & IT." headline, intro, CTAs, tool tiles; photo card right
+3. Tech Stack (`#skills`) — centered header + icon pills (incl. n8n, Zapier, HubSpot, Basecamp, AI Agents, Microsoft 365, Entra ID, SharePoint)
 4. Projects (`#projects`) — centered header, filter pills, 2-col card grid
-5. Certifications (`#certifications`) — 3 cards
-6. Contact (`#contact`) — link cards + form
-7. Footer
+5. Experience (`#experience`) — accordion of 3 roles from the resume (Elite Brands of Colorado, Algorizin, Titan Fittings); first card open by default, ≤3 bullets each
+6. Certifications (`#certifications`) — 3 cards
+7. Contact (`#contact`) — link cards + form
+8. Footer
 
-There is no About or Experience section. (Experience accordion à la the reference design can be added once there are real roles to list.)
+There is no About section (folded into hero).
 
 ---
 
@@ -124,7 +126,7 @@ AOS stagger delays: 0, 50, 100, 150, 200, 250, 300, 350ms via `style="transition
 
 ## Project Filter Tabs
 
-Filter pill bar sits centered between the section header and the grid. Active tab = white bg / black text. 10 tabs total:
+Filter pill bar sits centered between the section header and the grid. Active tab = white bg / black text. 11 tabs total (incl. Vibe Coded Apps → placeholder card):
 
 | Tab label | `data-filter` | Shows |
 |-----------|---------------|-------|
@@ -140,7 +142,7 @@ Filter pill bar sits centered between the section header and the grid. Active ta
 | Publications | `publications` | Placeholder card |
 
 ### Placeholder cards
-Two "Coming Soon" cards (Tableau, Publications) with `style="display:none"` by default — same two-block article structure but `border-2 border-dashed border-line` and a gray glyph at low opacity.
+Three "Coming Soon" cards (Tableau, Vibe Coded Apps `data-filter="apps"`, Publications) with `style="display:none"` by default — same two-block article structure but `border-2 border-dashed border-line` and a gray glyph at low opacity.
 
 ### JS filter logic (IIFE section 6)
 - `applyFilter(category)` toggles active/inactive classes on tabs and shows/hides cards
