@@ -323,8 +323,8 @@
     <!-- Filter tabs -->
     <div class="mt-10 mb-12 aos" style="transition-delay:100ms">
       <div class="flex gap-2 flex-wrap justify-center">
-        <button class="filter-tab filter-tab-active" data-filter="all">All <span class="font-mono text-[0.65rem] opacity-60 ml-0.5">(9)</span></button>
-        <button class="filter-tab filter-tab-inactive" data-filter="automation">Automation <span class="font-mono text-[0.65rem] opacity-60 ml-0.5">(1)</span></button>
+        <button class="filter-tab filter-tab-active" data-filter="all">All <span class="font-mono text-[0.65rem] opacity-60 ml-0.5">(10)</span></button>
+        <button class="filter-tab filter-tab-inactive" data-filter="automation">Automation <span class="font-mono text-[0.65rem] opacity-60 ml-0.5">(2)</span></button>
         <button class="filter-tab filter-tab-inactive" data-filter="python-ml">Python / ML <span class="font-mono text-[0.65rem] opacity-60 ml-0.5">(3)</span></button>
         <button class="filter-tab filter-tab-inactive" data-filter="data-analysis">Data Analysis <span class="font-mono text-[0.65rem] opacity-60 ml-0.5">(2)</span></button>
         <button class="filter-tab filter-tab-inactive" data-filter="sql">SQL <span class="font-mono text-[0.65rem] opacity-60 ml-0.5">(2)</span></button>
@@ -372,6 +372,45 @@
           </div>
           <div class="mt-6 flex gap-2">
             <a href="https://github.com/ikbal-h-112/BevBot" target="_blank" rel="noopener" class="btn-white btn-sm">
+              Source Code
+              <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── Project 0b: Expense Analyzer ── -->
+      <article data-categories="all automation" class="aos flex flex-col gap-2.5" style="transition-delay:50ms">
+        <div class="rounded-2xl overflow-hidden border border-line bg-card h-56 md:h-64 flex items-center justify-center" style="background:radial-gradient(ellipse at 50% 80%, #232323 0%, #161616 70%)">
+          <svg class="w-24 h-24" viewBox="0 0 64 64" fill="none" stroke="rgba(251,191,36,0.55)" stroke-width="1.5">
+            <path d="M18 6 L46 6 L46 50 L41 46 L36 50 L31 46 L26 50 L21 46 L18 50 Z" fill="rgba(251,191,36,0.07)"/>
+            <line x1="24" y1="14" x2="40" y2="14"/>
+            <line x1="24" y1="20" x2="36" y2="20"/>
+            <line x1="24" y1="26" x2="38" y2="26"/>
+            <line x1="24" y1="32" x2="33" y2="32"/>
+            <line x1="24" y1="38" x2="40" y2="38" stroke="rgba(251,191,36,0.85)" stroke-width="2"/>
+            <rect x="8" y="24" width="12" height="12" rx="3" fill="rgba(251,191,36,0.12)" stroke="rgba(251,191,36,0.7)"/>
+            <path d="M11 30 L13.5 32.5 L17.5 27.5" stroke="rgba(251,191,36,0.85)"/>
+            <circle cx="52" cy="44" r="8" fill="rgba(251,191,36,0.1)"/>
+            <path d="M52 40.5 C50 40.5 49 41.5 49 42.6 C49 45 55 44 55 46.4 C55 47.5 54 48.5 52 48.5 M52 39.5 L52 49.5" stroke="rgba(251,191,36,0.85)"/>
+          </svg>
+        </div>
+        <div class="rounded-2xl border border-line bg-card p-6 md:p-7 flex flex-col flex-1">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-xl font-semibold text-white tracking-tight">Expense Analyzer — AI Receipt Scanner</h3>
+            <span class="font-mono text-xs text-neutral-500 shrink-0">2026</span>
+          </div>
+          <p class="mt-3 text-[15px] text-neutral-400 leading-relaxed">
+            A chat-based expense assistant on n8n. Claude&rsquo;s vision reads receipt photos
+            and logs merchant, date, total and category to Google Sheets, emails a CFO
+            alert on high spend, and answers natural-language questions about past
+            spending straight from the data.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="tag-pill">n8n</span><span class="tag-pill">Claude Vision</span><span class="tag-pill">Google Sheets</span><span class="tag-pill">Gmail</span>
+          </div>
+          <div class="mt-6 flex gap-2">
+            <a href="https://github.com/ikbal-h-112/Expense-Analyzer" target="_blank" rel="noopener" class="btn-white btn-sm">
               Source Code
               <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
