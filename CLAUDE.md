@@ -91,9 +91,10 @@ Text: `text-white` headings, `text-neutral-400` body, `text-neutral-500` muted/m
 3. Tech Stack (`#skills`) — centered header + icon pills (incl. n8n, Zapier, HubSpot, Basecamp, AI Agents, Microsoft 365, Entra ID, SharePoint)
 4. Projects (`#projects`) — centered header, filter pills, 2-col card grid
 5. Experience (`#experience`) — accordion of 3 roles from the resume (Elite Brands of Colorado, Algorizin, Titan Fittings); first card open by default, ≤3 bullets each
-6. Certifications (`#certifications`) — 3 cards
-7. Contact (`#contact`) — link cards + form
-8. Footer
+6. Education (`#education`) — 2 degree cards (MS Computer Science, USD 2021–2023; BS CSE, North South University 2015–2020)
+7. Certifications (`#certifications`) — 3 cards (all 2023, no credential links)
+8. Contact (`#contact`) — link cards + form (submits to Google Sheet via Apps Script `FORM_ENDPOINT`; JS section 8)
+9. Footer
 
 There is no About section (folded into hero).
 
